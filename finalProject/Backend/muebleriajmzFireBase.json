@@ -1,0 +1,368 @@
+{
+  "pedidos": {
+    "pedidos": [
+      {
+        "clientID": 2,
+        "orderAddress": "Calle Secundaria 789, Colonia Jardines",
+        "orderAmount": 1967,
+        "orderID": "0",
+        "orderQuantity": 10,
+        "orderStatus": "Enviado",
+        "productClasification": "habitacion",
+        "productOrdered": "Sofa de 3 plazas"
+      },
+      {
+        "clientID": 1,
+        "orderAddress": "Calle Secundaria 789, Colonia Jardines",
+        "orderAmount": 1044,
+        "orderID": "1",
+        "orderQuantity": 7,
+        "orderStatus": "Pendiente",
+        "productClasification": "habitacion",
+        "productOrdered": "Silla de comedor"
+      },
+      {
+        "clientID": 4,
+        "orderAddress": "Avenida Principal 456, Zona Centro",
+        "orderAmount": 1562,
+        "orderID": "2",
+        "orderQuantity": 1,
+        "orderStatus": "Enviado",
+        "productClasification": "sala",
+        "productOrdered": "Escritorio de oficina"
+      },
+      {
+        "clientID": 4,
+        "orderAddress": "Calle Falsa 123, Ciudad Ejemplo",
+        "orderAmount": 1481,
+        "orderID": "3",
+        "orderQuantity": 1,
+        "orderStatus": "Enviado",
+        "productClasification": "oficina",
+        "productOrdered": "Sofa de 3 plazas"
+      },
+      {
+        "clientID": 5,
+        "orderAddress": "Avenida Principal 456, Zona Centro",
+        "orderAmount": 1110,
+        "orderID": "4",
+        "orderQuantity": 8,
+        "orderStatus": "Cancelado",
+        "productClasification": "habitacion",
+        "productOrdered": "Sofa de 3 plazas"
+      },
+      {
+        "clientID": 4,
+        "orderAddress": "Calle Secundaria 789, Colonia Jardines",
+        "orderAmount": 1192,
+        "orderID": "5",
+        "orderQuantity": 10,
+        "orderStatus": "Pendiente",
+        "productClasification": "oficina",
+        "productOrdered": "Mesa de comedor actualizada"
+      },
+      {
+        "clientID": 1,
+        "orderAddress": "Avenida Principal 456, Zona Centro",
+        "orderAmount": 1234,
+        "orderID": "6",
+        "orderQuantity": 3,
+        "orderStatus": "Completado",
+        "productClasification": "habitacion",
+        "productOrdered": "Escritorio de oficina"
+      },
+      {
+        "clientID": 2,
+        "orderAddress": "Calle Falsa 123, Ciudad Ejemplo",
+        "orderAmount": 194,
+        "orderID": "7",
+        "orderQuantity": 10,
+        "orderStatus": "Enviado",
+        "productClasification": "comedor",
+        "productOrdered": "Escritorio de oficina"
+      },
+      {
+        "clientID": 1,
+        "orderAddress": "Boulevard Reforma 1010, Fraccionamiento Vista Hermosa",
+        "orderAmount": 1258,
+        "orderID": "8",
+        "orderQuantity": 10,
+        "orderStatus": "Pendiente",
+        "productClasification": "sala",
+        "productOrdered": "Mesa de comedor actualizada"
+      },
+      {
+        "clientID": 3,
+        "orderAddress": "Calle Falsa 123, Ciudad Ejemplo",
+        "orderAmount": 1267,
+        "orderID": "9",
+        "orderQuantity": 8,
+        "orderStatus": "Cancelado",
+        "productClasification": "comedor",
+        "productOrdered": "Silla de comedor"
+      },
+      {
+        "clientID": 3,
+        "orderAddress": "Calle Falsa 123, Ciudad Ejemplo",
+        "orderAmount": 323,
+        "orderID": "10",
+        "orderQuantity": 1,
+        "orderStatus": "Cancelado",
+        "productClasification": "sala",
+        "productOrdered": "Sofa de 3 plazas"
+      },
+      {
+        "clientID": 2,
+        "orderAddress": "Avenida Principal 456, Zona Centro",
+        "orderAmount": 1709,
+        "orderID": "11",
+        "orderQuantity": 3,
+        "orderStatus": "Completado",
+        "productClasification": "habitacion",
+        "productOrdered": "Mesa de comedor actualizada"
+      },
+      {
+        "clientID": 3,
+        "orderAddress": "Calle Falsa 123, Ciudad Ejemplo",
+        "orderAmount": 610,
+        "orderID": "12",
+        "orderQuantity": 5,
+        "orderStatus": "Cancelado",
+        "productClasification": "oficina",
+        "productOrdered": "Escritorio de oficina"
+      },
+      {
+        "clientID": 3,
+        "orderAddress": "Boulevard Reforma 1010, Fraccionamiento Vista Hermosa",
+        "orderAmount": 1944,
+        "orderID": "13",
+        "orderQuantity": 8,
+        "orderStatus": "Enviado",
+        "productClasification": "comedor",
+        "productOrdered": "Silla de comedor"
+      },
+      {
+        "clientID": 3,
+        "orderAddress": "Avenida Principal 456, Zona Centro",
+        "orderAmount": 235,
+        "orderID": "14",
+        "orderQuantity": 2,
+        "orderStatus": "Cancelado",
+        "productClasification": "oficina",
+        "productOrdered": "Silla de comedor"
+      },
+      {
+        "clientID": 5,
+        "orderAddress": "Calle Falsa 123, Ciudad Ejemplo",
+        "orderAmount": 1708,
+        "orderID": "15",
+        "orderQuantity": 5,
+        "orderStatus": "Cancelado",
+        "productClasification": "sala",
+        "productOrdered": "Mesa de comedor actualizada"
+      },
+      {
+        "clientID": 3,
+        "orderAddress": "Calle Secundaria 789, Colonia Jardines",
+        "orderAmount": 1278,
+        "orderID": "16",
+        "orderQuantity": 5,
+        "orderStatus": "Cancelado",
+        "productClasification": "sala",
+        "productOrdered": "Silla de comedor"
+      },
+      {
+        "clientID": 10,
+        "orderAddress": "Calle Ejemplo 123",
+        "orderAmount": 800,
+        "orderID": "17",
+        "orderQuantity": 1,
+        "orderStatus": "Pendiente",
+        "productClasification": "comedor",
+        "productOrdered": "Mesa de comedor"
+      },
+      {
+        "clientID": 20,
+        "orderAddress": "DirecciontestPost",
+        "orderAmount": 160,
+        "orderID": "18",
+        "orderQuantity": 2,
+        "orderStatus": "Cancelado",
+        "productClasification": "habitacion",
+        "productOrdered": "Lampara de noche"
+      },
+      {
+        "clientID": 20,
+        "orderAddress": "direcciontest2",
+        "orderAmount": 1200,
+        "orderID": "19",
+        "orderQuantity": 4,
+        "orderStatus": "En proceso",
+        "productClasification": "comedor",
+        "productOrdered": "Vitrina de comedor"
+      },
+      {
+        "clientID": 20,
+        "orderAddress": "testredirect",
+        "orderAmount": 900,
+        "orderID": "20",
+        "orderQuantity": 3,
+        "orderStatus": "Pendiente",
+        "productClasification": "comedor",
+        "productOrdered": "Vitrina de comedor"
+      },
+      {
+        "clientID": 20,
+        "orderAddress": "allende",
+        "orderAmount": 450,
+        "orderID": "21",
+        "orderQuantity": 6,
+        "orderStatus": "En proceso",
+        "productClasification": "comedor",
+        "productOrdered": "Silla de comedor"
+      },
+      {
+        "clientID": 20,
+        "orderAddress": "test",
+        "orderAmount": 900,
+        "orderID": "22",
+        "orderQuantity": 3,
+        "orderStatus": "Pendiente",
+        "productClasification": "comedor",
+        "productOrdered": "Vitrina de comedor"
+      },
+      {
+        "clientID": 25,
+        "orderAddress": "tasfasf",
+        "orderAmount": 600,
+        "orderID": "23",
+        "orderQuantity": 2,
+        "orderStatus": "En proceso",
+        "productClasification": "comedor",
+        "productOrdered": "Vitrina de comedor"
+      }
+    ]
+  },
+  "productos": {
+    "comedor": [
+      {
+        "descripcion": "Mesa de comedor de madera para 8 personas",
+        "id": "PROD001",
+        "nombre": "Mesa de comedor actualizada",
+        "precio": 800,
+        "stock": 10
+      },
+      {
+        "descripcion": "silla de comedor con descripcion",
+        "id": "PROD002",
+        "nombre": "Silla de comedor",
+        "precio": 75,
+        "stock": 50
+      },
+      {
+        "descripcion": "Vitrina de cristal para vajillas",
+        "id": "PROD003",
+        "nombre": "Vitrina de comedor",
+        "precio": 300,
+        "stock": 15
+      },
+      {
+        "descripcion": "Lampara colgante moderna para comedor",
+        "id": "PROD010",
+        "nombre": "Lampara de comedor",
+        "precio": 120,
+        "stock": 25
+      }
+    ],
+    "habitacion": [
+      {
+        "descripcion": "Cama con cabecera y espacio de almacenamiento",
+        "id": "PROD007",
+        "nombre": "Cama matrimonial",
+        "precio": 800,
+        "stock": 5
+      },
+      {
+        "descripcion": "Mesita de noche con cajones",
+        "id": "PROD008",
+        "nombre": "Mesita de noche",
+        "precio": 120,
+        "stock": 20
+      },
+      {
+        "descripcion": "Armario espacioso de madera",
+        "id": "PROD009",
+        "nombre": "Armario de habitacion",
+        "precio": 600,
+        "stock": 8
+      },
+      {
+        "descripcion": "Lampara de noche LED para habitacion",
+        "id": "PROD012",
+        "nombre": "Lampara de noche",
+        "precio": 80,
+        "stock": 30
+      }
+    ],
+    "oficina": [
+      {
+        "descripcion": "Escritorio ergonomico para oficina",
+        "id": "PROD013",
+        "nombre": "Escritorio de oficina",
+        "precio": 350,
+        "stock": 12
+      },
+      {
+        "descripcion": "Silla ergonomica ajustable para oficina",
+        "id": "PROD014",
+        "nombre": "Silla ergonomica",
+        "precio": 180,
+        "stock": 40
+      },
+      {
+        "descripcion": "Librero alto de madera para documentos",
+        "id": "PROD015",
+        "nombre": "Librero de oficina",
+        "precio": 250,
+        "stock": 7
+      },
+      {
+        "descripcion": "Lampara de escritorio LED con brazo ajustable",
+        "id": "PROD016",
+        "nombre": "Lampara de escritorio",
+        "precio": 60,
+        "stock": 18
+      }
+    ],
+    "sala": [
+      {
+        "descripcion": "Sofa comodo de tres plazas",
+        "id": "PROD004",
+        "nombre": "Sofa de 3 plazas",
+        "precio": 700,
+        "stock": 7
+      },
+      {
+        "descripcion": "Mesa de centro de vidrio templado",
+        "id": "PROD005",
+        "nombre": "Mesa de centro",
+        "precio": 150,
+        "stock": 10
+      },
+      {
+        "descripcion": "Estante decorativo para sala",
+        "id": "PROD006",
+        "nombre": "Estante de pared",
+        "precio": 90,
+        "stock": 20
+      },
+      {
+        "descripcion": "Alfombra decorativa para sala de estar",
+        "id": "PROD011",
+        "nombre": "Alfombra para sala",
+        "precio": 200,
+        "stock": 8
+      }
+    ]
+  }
+}

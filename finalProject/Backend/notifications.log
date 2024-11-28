@@ -1,0 +1,4 @@
+{"clientID":20,"level":"info","message":"Tu pedido con ID: 24 fue actualizado a Enviado","orderID":"24","read":true,"status":"Enviado","timestamp":"2024-11-28T10:01:31.164Z"}
+{"clientID":"20","level":"info","message":"Notificación enviada a cliente 20: El estado de tu pedido 24 ha sido actualizado a: Enviado El estado de tu pedido 24 ha sido actualizado a: Enviado","orderID":"24","read":false,"timestamp":"11/28/2024, 4:01:31 AM"}
+{"clientID":20,"level":"info","message":"Tu pedido con ID: 24 fue actualizado a Enviado","orderID":"24","read":true,"status":"Enviado","timestamp":"2024-11-28T10:09:15.613Z"}
+{"clientID":"20","level":"info","message":"Notificación enviada a cliente 20: El estado de tu pedido 24 ha sido actualizado a: Enviado El estado de tu pedido 24 ha sido actualizado a: Enviado","orderID":"24","read":false,"timestamp":"11/28/2024, 4:09:15 AM"}

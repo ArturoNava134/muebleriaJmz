@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Products() {
   const [auth, setAuth] = useState(false);
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate(); // Para redirigir con datos
 
   useEffect(() => {
     axios
@@ -34,6 +35,11 @@ function Products() {
       .catch((err) => console.log(err));
   }, []);
 
+  const handleBuyClick = (product) => {
+    // Navegar a la página de detalles con los datos del producto
+    navigate("/productDetails", { state: { product } });
+  };
+
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-100 px-4 py-6">
       {auth ? (
@@ -44,23 +50,30 @@ function Products() {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="border rounded-lg p-4 bg-white shadow-lg hover:shadow-2xl transition"
+                className="flex flex-col justify-between border rounded-lg p-4 bg-white shadow-lg hover:shadow-2xl transition"
               >
-                <img
-                  src={product.imagen || "https://via.placeholder.com/250"}
-                  alt={product.nombre}
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                />
-                <h3 className="text-lg font-bold text-gray-800 mb-2">
-                  {product.nombre}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  {product.descripción}
-                </p>
-                <p className="text-red-600 text-lg font-bold mb-4">
-                  ${product.precio.toFixed(2)}
-                </p>
-                <button className="block mx-auto px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+                <div>
+                  {/* Usamos la URL del backend para cargar la imagen */}
+                  <img
+                    src={`http://localhost:8081/images/${product.imagen}`} // Aquí es donde se toma la imagen desde el backend
+                    alt={product.nombre}
+                    className="w-full h-48 object-cover rounded-md mb-4"
+                  />
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">
+                    {product.nombre}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {product.descripcion}
+                  </p>
+                  <p className="text-red-600 text-lg font-bold mb-4">
+                    ${product.precio.toFixed(2)}
+                  </p>
+                </div>
+                {/* Botón Comprar */}
+                <button
+                  onClick={() => handleBuyClick(product)}
+                  className="block w-full px-4 py-2 bg-red-600 text-white text-center rounded-lg hover:bg-red-700 transition"
+                >
                   Comprar
                 </button>
               </div>
@@ -72,12 +85,12 @@ function Products() {
           <h1 className="text-2xl font-bold text-gray-800 mb-4">
             Parece que no has iniciado sesión :c
           </h1>
-          <Link
-            to="/Login"
+          <a
+            href="/Login"
             className="text-lg font-semibold text-blue-600 hover:underline"
           >
             Iniciar Sesión
-          </Link>
+          </a>
         </div>
       )}
     </div>

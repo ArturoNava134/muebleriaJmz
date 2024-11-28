@@ -163,9 +163,8 @@ function AdminProducts() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-        {auth ? (
-        <>
-        
+      {auth ? (
+      <>
       <div className="flex justify-between items-center mb-6 max-w-6xl mx-auto">
         <h1 className="text-2xl font-bold">Gestión de Inventario</h1>
         <input
@@ -357,7 +356,7 @@ function AdminProducts() {
           </tbody>
         </table>
       </div>
-        </>
+    </>
     ) : (
         <div className="flex flex-col items-center justify-center min-h-screen">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">

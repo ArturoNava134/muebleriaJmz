@@ -5,10 +5,15 @@ import Login from "./components/signIn/Login"
 import Register from "./components/signUp/Register";
 import LoginAdmin from "./components/adminSignIn/loginAdmin";
 import NavbarAdmin from "./components/NavbarAdmin/navbarAdmin";
+import AdminOrders from "./components/gestionarOrdenes/manageOrders";
 import AdminProducts from "./components/gestionarProductos/manageProducts";
+import NotificationsPage from "./components/notificaciones/notificaciones";
+import Orders from "./components/viewOrders/viewOrders";
+import UsersPage from "./components/manageUsers/manageUsers";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductDetails from "./components/buyProduct/buyProduct";
 
 const App = () => {
   const [orderPopup, setOrderPopup] = useState(false);
@@ -75,6 +80,52 @@ const App = () => {
             }
           />
 
+          <Route
+            path="/manageOrders"
+            element={
+              <>
+                <NavbarAdmin />
+                <AdminOrders />
+              </>
+            }
+          />
+
+          <Route
+            path="/productDetails"
+            element={
+              <>
+                <Navbar />
+                <ProductDetails />
+              </>
+            }
+          />
+           <Route
+            path="/Orders"
+            element={
+              <>
+                <Navbar />
+                <Orders />
+              </>
+            }
+          />
+          <Route
+            path="/notifications"
+            element={
+              <>
+                <Navbar />
+                <NotificationsPage />
+              </>
+            }
+          />
+          <Route
+            path="/manageUsers"
+            element={
+              <>
+                <NavbarAdmin />
+                <UsersPage />
+              </>
+            }
+          />
         </Routes>
       </div>
     </Router>

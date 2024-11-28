@@ -142,6 +142,27 @@ class db {
         return $res['httpCode'] === 200; // Devuelve true si la operación fue exitosa
     }
     
+    
+
+    public function getProductById(string $category, string $productId) {
+        if (!$this->isCategoryInDB($category)) {
+            return null; // Si la categoría no existe, devolver null
+        }
+
+        // Obtener los productos de la categoría
+        $products = $this->obtainProducts($category);
+
+        // Buscar el producto por ID
+        foreach ($products as $product) {
+            if ($product['id'] === $productId) {
+                return $product; // Devolver el producto si se encuentra
+            }
+        }
+
+        return null; // Devolver null si no se encuentra el producto
+    }
+    
 }
+
 
 ?>

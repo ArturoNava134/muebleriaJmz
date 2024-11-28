@@ -20,7 +20,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
 });
 
 // New route to get products from Firebase
-$app->get('/getProducts/{categoria}', function (Request $request, Response $response, $args) use ($firebase) {
+$app->get('/apiPHP/{categoria}', function (Request $request, Response $response, $args) use ($firebase) {
     $categoria = strtolower($args['categoria']); // Get category parameter and convert to lowercase
 
     // Check if category exists in Firebase
@@ -48,7 +48,7 @@ $app->get('/getProducts/{categoria}', function (Request $request, Response $resp
 });
 
 // Update an existing product
-$app->put('/updtProducts/{categoria}/{id}', function (Request $request, Response $response, $args) use ($firebase) {
+$app->put('/apiPHP/{categoria}/{id}', function (Request $request, Response $response, $args) use ($firebase) {
     $categoria = strtolower($args['categoria'] ?? ''); 
     $id = $args['id'] ?? ''; 
     $producto = $request->getParsedBody(); 
@@ -92,7 +92,7 @@ $app->put('/updtProducts/{categoria}/{id}', function (Request $request, Response
 });
 
 // Add a new product by category
-$app->post('/setProduct/{categoria}', function (Request $request, Response $response, $args) use ($firebase) {
+$app->post('/apiPHP/{categoria}', function (Request $request, Response $response, $args) use ($firebase) {
     $categoria = strtolower($args['categoria']); // Obtener la categoría de la ruta
     $producto = $request->getParsedBody(); // Obtener el producto del cuerpo de la solicitud
 
@@ -134,7 +134,7 @@ $app->post('/setProduct/{categoria}', function (Request $request, Response $resp
 });
 
 // Delete a product by category and ID
-$app->delete('/deleteProduct/{categoria}/{id}', function (Request $request, Response $response, $args) use ($firebase) {
+$app->delete('/apiPHP/{categoria}/{id}', function (Request $request, Response $response, $args) use ($firebase) {
     $categoria = strtolower($args['categoria'] ?? '');
     $id = $args['id'] ?? '';
 
@@ -176,7 +176,7 @@ $app->delete('/deleteProduct/{categoria}/{id}', function (Request $request, Resp
 });
 
 // Route to get all products across all categories
-$app->get('/getAllProducts', function (Request $request, Response $response, $args) use ($firebase) {
+$app->get('/apiPHP', function (Request $request, Response $response, $args) use ($firebase) {
     // Fetch all categories
     $categories = ['comedor', 'habitacion', 'oficina', 'sala']; // Add more categories if necessary
     $allProducts = [];
@@ -210,6 +210,48 @@ $app->get('/getAllProducts', function (Request $request, Response $response, $ar
             'data' => [],
             'status' => 'error'
         ];
+    }
+
+    $response->getBody()->write(json_encode($resp, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+    return $response->withHeader('Content-Type', 'application/json');
+});
+
+// Get a specific product by category and ID
+$app->get('/apiPHP/{categoria}/{id}', function (Request $request, Response $response, $args) use ($firebase) {
+    $categoria = strtolower($args['categoria'] ?? '');
+    $id = $args['id'] ?? '';
+
+    if (empty($categoria) || empty($id)) {
+        $resp = [
+            'code' => 400,
+            'message' => 'Datos incompletos. Se requiere categoría e ID del producto.',
+            'status' => 'error'
+        ];
+    } else {
+        if ($firebase->isCategoryInDB($categoria)) {
+            $product = $firebase->getProductById($categoria, $id);
+
+            if ($product) {
+                $resp = [
+                    'code' => 200,
+                    'message' => 'Producto obtenido correctamente',
+                    'data' => $product,
+                    'status' => 'success'
+                ];
+            } else {
+                $resp = [
+                    'code' => 404,
+                    'message' => 'Producto no encontrado en la categoría especificada',
+                    'status' => 'error'
+                ];
+            }
+        } else {
+            $resp = [
+                'code' => 404,
+                'message' => 'Categoría no encontrada',
+                'status' => 'error'
+            ];
+        }
     }
 
     $response->getBody()->write(json_encode($resp, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
